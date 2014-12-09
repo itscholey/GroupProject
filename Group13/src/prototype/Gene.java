@@ -1,24 +1,26 @@
 package prototype;
 
+import java.util.Random;
+
 public class Gene {
 
 	private Integer[] values;
+	private Random rnd;
 	
 	public Gene()
 	{
-		values = new Integer[9];
+		values = new Integer[3];
+		randomGenes();
 	}
 	
-	public void mutate() {
-		// placeholder - make it change the gene value randomly
-	}
-	
-	/**
-	 * Update the gene values with specific values.
-	 * 
-	 * @param values An array of values the gene should hold.
-	 */
-	public void updateGene(Integer[] values) {
+	private void randomGenes() 
+	{
+		rnd = new Random(9);
 		
+		// create random genes
+		for (int i = 0; i < values.length; i++) 
+		{
+			values[i] = rnd.nextInt();
+		}
 	}
 }
