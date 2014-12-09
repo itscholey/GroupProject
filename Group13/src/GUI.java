@@ -1,28 +1,52 @@
 
 public class GUI {
 
-	private Picture[] pictures;
+	private Picture[] children;
 	private Picture parent;
 	
+	/**
+	 * 
+	 */
 	public GUI() 
 	{
-		pictures = new Picture[8];
+		children = new Picture[8];
+		parent = new Picture();
+		newGeneration();
 	}
 	
 	
 	/**
-	 * When a picture is clicked, call p.selectAsParent().
-	 * When this has been done, call GUI.newGeneration();
+	 * Set the parent picture to be the selected child.
 	 */	
-	public void setParent() {
-		
+	public void setParent(Picture newParent) 
+	{
+		// set parent field to the selected child
 	}
 	
 	
 	/**
+	 * Update the parent picture with new values, subsequently
+	 * triggering a new generation to be created.
+	 * 
 	 * \\ Call updatePicture() on each picture in a for loop
 	 */
-	public void newGeneration() {
+	public void updatePictures(Integer[] values) 
+	{
 		
+	}
+	
+	/**
+	 * Create a new generation of pictures, based on the parent.
+	 */
+	public void newGeneration() 
+	{
+		Picture[] newGen = new Picture[8];
+		for (int i = 0; i < children.length; i++) 
+		{
+			Picture p = new Picture(parent);
+			newGen[i] = p;
+		}
+		
+		children = newGen;
 	}
 }
