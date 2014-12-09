@@ -1,3 +1,5 @@
+package prototype;
+
 public class PictureGenerator {
 
 	private Biomorph biomorph; // the biomorph this generator represents
