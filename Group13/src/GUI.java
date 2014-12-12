@@ -1,4 +1,4 @@
-
+// kens test comment
 public class GUI {
 
 	private Picture[] children;
