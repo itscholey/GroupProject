@@ -44,7 +44,7 @@ public class GUI {
 		for (int i = 0; i < children.length; i++) 
 		{
 			Picture p = new Picture(parent);
-			newGen[i] = p;
+			//newGen[i] = p;
 		}
 		
 		children = newGen;
