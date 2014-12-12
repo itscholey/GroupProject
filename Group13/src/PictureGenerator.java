@@ -1,8 +1,9 @@
 public class PictureGenerator {
 
 	private Biomorph biomorph; // the biomorph this generator represents
-	private Coordinate[] coords; // the coordinates representing the biomorph
+	//private Coordinate[] coords; // the coordinates representing the biomorph
 	private PictureGenerator parent;
+	private CoordinateTree coords;
 	
 	/**
 	 * Create a random PictureGenerator for a random representation.

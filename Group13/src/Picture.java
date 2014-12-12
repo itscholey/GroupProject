@@ -3,7 +3,7 @@ public class Picture {
 
 	private PictureGenerator picture;
 	private Picture parent;
-	private Coordinate[] coords;
+	//private Coordinate[] coords;
 	
 	/**
 	 * Create a random picture.
@@ -13,7 +13,7 @@ public class Picture {
 		// create random picture
 		picture = new PictureGenerator();
 		parent = this;
-		coords = picture.getCoordinates();
+		//coords = picture.getCoordinates();
 	}
 	
 	/**
@@ -25,7 +25,7 @@ public class Picture {
 	{
 		this.parent = parent;
 		picture = new PictureGenerator(parent.getPictureGenerator());
-		coords = picture.getCoordinates();
+		//coords = picture.getCoordinates();
 	}
 	
 	/**
